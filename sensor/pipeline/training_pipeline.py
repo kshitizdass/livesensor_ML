@@ -139,7 +139,7 @@ class TrainPipeline:
             if not model_eval_artifact.is_model_accepted:
                 raise Exception("Trained model is not better than the best model")  
             
-            model_eval_artifact = self.start_model_pusher(model_eval_artifact) 
+            model_pusher_artifact = self.start_model_pusher(model_eval_artifact)
 
             TrainPipeline.is_pipeline_running = False
 
